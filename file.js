@@ -8,22 +8,26 @@ allButtons.forEach(button => {
         if (value === '='){
             if (displayValues.innerText.includes('+')){
                 const splitStuff = displayValues.innerText.split('+')
-                operate('+', splitStuff[0], splitStuff[1])
+                const final = operate('+', splitStuff[0], splitStuff[1])
+                final = final.slice(0,-1)
             }
 
             if (displayValues.innerText.includes('-')){
                 const splitStuff = displayValues.innerText.split('-')
-                operate('-', splitStuff[0], splitStuff[1])
+                const final = operate('-', splitStuff[0], splitStuff[1])
+                final = final.slice(0,-1)
             }
 
             if (displayValues.innerText.includes('x')){
                 const splitStuff = displayValues.innerText.split('x')
-                operate('x', splitStuff[0], splitStuff[1])
+                const final = operate('x', splitStuff[0], splitStuff[1])
+                final = final.slice(0,-1)
             }
 
             if (displayValues.innerText.includes('÷')){
                 const splitStuff = displayValues.innerText.split('÷')
-                operate('÷', splitStuff[0], splitStuff[1])
+                const final = operate('÷', splitStuff[0], splitStuff[1])
+                final = final.slice(0,-1)
             }
         }
         displayValues.innerText += value
